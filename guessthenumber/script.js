@@ -39,3 +39,6 @@ function newGame() {
 function toggleTheme() {
     document.body.classList.toggle("dark");
 }
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
