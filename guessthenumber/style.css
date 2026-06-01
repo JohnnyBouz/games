@@ -19,4 +19,39 @@ input{
 
 button{
     padding: 10px 15px;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    color: white;
+}
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    color: white;
+}
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    color: white;
 }

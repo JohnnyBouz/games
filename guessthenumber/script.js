@@ -53,3 +53,13 @@ function newGame(){
 
     document.getElementById("guessInput").value = "";
 }
+
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
