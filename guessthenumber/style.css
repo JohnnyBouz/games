@@ -50,3 +50,12 @@ button {
     background-color: #333;
     color: white;
 }
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    color: white;
+}
