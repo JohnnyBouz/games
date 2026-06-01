@@ -1,8 +1,5 @@
-
-<p>Best Score: <span id="bestScore">-</span></p>
-<button onclick="toggleTheme()"> Dark Mode</button>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1> Guess The Number</h1>
+        <p>Μάντεψε έναν αριθμό από το 1 έως το 100</p>
 
-<div class="container">
-    <h1>Guess The Number</h1>
-    <p>I'm thinking of a number between 1 and 100.</p>
+        <input type="number" id="guessInput" min="1" max="100">
+        <button id="guessBtn">Guess</button>
+        <button id="restartBtn">New Game</button>
 
-    <input type="number" id="guessInput" placeholder="Enter your guess">
-    <button onclick="checkGuess()">Guess</button>
+        <p id="message">Καλή επιτυχία!</p>
+        <p>Προσπάθειες: <span id="attempts">0</span></p>
+    </div>
 
-    <p id="message"></p>
-    <p>Attempts: <span id="attempts">0</span></p>
-
-    <button onclick="newGame()">New Game</button>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
