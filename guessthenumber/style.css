@@ -32,3 +32,12 @@ button {
     margin-top: 15px;
 }
 
+.dark {
+    background-color: #222;
+    color: white;
+}
+
+.dark .container {
+    background-color: #333;
+    color: white;
+}

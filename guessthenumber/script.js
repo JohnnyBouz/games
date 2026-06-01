@@ -36,3 +36,6 @@ function newGame() {
     document.getElementById("guessInput").value = "";
 }
 
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
