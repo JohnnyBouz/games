@@ -48,9 +48,6 @@ function newGame() {
 function toggleTheme() {
     document.body.classList.toggle("dark");
 }
-
-if (!bestScore || attempts < bestScore) {
-    bestScore = attempts;
-    localStorage.setItem("bestScore", bestScore);
-    document.getElementById("bestScore").textContent = bestScore;
+function toggleTheme() {
+    document.body.classList.toggle("dark");
 }
