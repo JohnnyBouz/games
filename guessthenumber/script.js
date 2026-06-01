@@ -15,31 +15,42 @@ function checkGuess() {
     const guess = Number(document.getElementById("guessInput").value);
     const message = document.getElementById("message");
 
-    if (!guess || guess < 1 || guess > 100) {
-        message.textContent =
-            "Δώσε αριθμό από 1 έως 100!";
-        return;
-    }
-
     attempts++;
     document.getElementById("attempts").textContent = attempts;
 
-    if (guess < secretNumber) {
-        message.textContent = "📉 Πολύ μικρός!";
-    } else if (guess > secretNumber) {
-        message.textContent = "📈 Πολύ μεγάλος!";
+    if (!guess) {
+        message.textContent = "Please enter a number!";
+        message.style.color = "orange";
+        return;
+    }
+
+    if (guess === secretNumber) {
+        message.textContent = `Congratulations! You found the number in ${attempts} attempts!`;
+        message.style.color = "green";
+    } else if (guess < secretNumber) {
+        message.textContent = "Too low!";
+        message.style.color = "red";
     } else {
-        message.textContent =
-            `🎉 Μπράβο! Το βρήκες σε ${attempts} προσπάθειες!`;
+        message.textContent = "Too high!";
+        message.style.color = "purple";
     }
 }
+if (guess === secretNumber)
+function newGame() {
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+    attempts = 0;
 
-document
-    .getElementById("guessBtn")
-    .addEventListener("click", checkGuess);
+    document.getElementById("attempts").textContent = 0;
+    document.getElementById("message").textContent = "";
+    document.getElementById("guessInput").value = "";
+}
 
-document
-    .getElementById("restartBtn")
-    .addEventListener("click", startGame);
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
 
-startGame();
+if (!bestScore || attempts < bestScore) {
+    bestScore = attempts;
+    localStorage.setItem("bestScore", bestScore);
+    document.getElementById("bestScore").textContent = bestScore;
+}
