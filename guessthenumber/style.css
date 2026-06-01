@@ -1,68 +1,22 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width: 350px;
+    background-color: #f0f0f0;
 }
 
-h1 {
-    color: #333;
+.container{
+    background: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-input {
-    width: 80%;
+input{
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
-button {
+button{
     padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background: #4facfe;
-    color: white;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #2f8cff;
-}
-
-#message {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.dark {
-    background-color: #222;
-    color: white;
-}
-
-.dark .container {
-    background-color: #333;
-    color: white;
-}
-.dark {
-    background-color: #222;
-    color: white;
-}
-
-.dark .container {
-    background-color: #333;
-    color: white;
 }
