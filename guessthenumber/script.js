@@ -1,4 +1,15 @@
-javascript
+
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+
+let bestScore = localStorage.getItem("bestScore");
+
+if (bestScore) {
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("bestScore").textContent = bestScore;
+    });
+}
+
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
@@ -26,7 +37,7 @@ function checkGuess() {
         message.style.color = "red";
     }
 }
-
+if (guess === secretNumber)
 function newGame() {
     secretNumber = Math.floor(Math.random() * 100) + 1;
     attempts = 0;
@@ -38,4 +49,10 @@ function newGame() {
 
 function toggleTheme() {
     document.body.classList.toggle("dark");
+}
+
+if (!bestScore || attempts < bestScore) {
+    bestScore = attempts;
+    localStorage.setItem("bestScore", bestScore);
+    document.getElementById("bestScore").textContent = bestScore;
 }
